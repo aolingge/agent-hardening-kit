@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "docs-reader": {
+      "command": "node",
+      "args": ["server.js"],
+      "permissionNotes": "Read-only docs access. No secrets. No network."
+    }
+  }
+}

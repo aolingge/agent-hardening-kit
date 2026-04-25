@@ -1,0 +1,21 @@
+<svg width="980" height="420" viewBox="0 0 980 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Hardening Kit CLI preview</title>
+  <desc id="desc">Terminal report showing score and findings.</desc>
+  <rect width="980" height="420" rx="18" fill="#0B1020"/>
+  <rect x="1" y="1" width="978" height="418" rx="17" stroke="#27324F" stroke-width="2"/>
+  <circle cx="36" cy="34" r="8" fill="#FF5C7A"/>
+  <circle cx="64" cy="34" r="8" fill="#F4C95D"/>
+  <circle cx="92" cy="34" r="8" fill="#58D68D"/>
+  <text x="32" y="82" fill="#C8FF7A" font-family="JetBrains Mono, Consolas, monospace" font-size="22">$ npx agent-hardening-kit --path .</text>
+  <text x="32" y="132" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Score: 92/100 (A)</text>
+  <text x="32" y="176" fill="#AFC1DC" font-family="Inter, Arial, sans-serif" font-size="20">Files inspected: 184 · Findings: 0 errors, 1 warning, 1 notice</text>
+  <rect x="32" y="214" width="916" height="62" rx="12" fill="#121A2C" stroke="#2D3B5D"/>
+  <text x="56" y="252" fill="#F4C95D" font-family="JetBrains Mono, Consolas, monospace" font-size="18">WARN</text>
+  <text x="136" y="252" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="18">mcp.unbounded-command</text>
+  <text x="456" y="252" fill="#AFC1DC" font-family="JetBrains Mono, Consolas, monospace" font-size="18">.cursor/mcp.json:12</text>
+  <rect x="32" y="294" width="916" height="62" rx="12" fill="#121A2C" stroke="#2D3B5D"/>
+  <text x="56" y="332" fill="#5AD7FF" font-family="JetBrains Mono, Consolas, monospace" font-size="18">NOTE</text>
+  <text x="136" y="332" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="18">release.no-proof</text>
+  <text x="456" y="332" fill="#AFC1DC" font-family="JetBrains Mono, Consolas, monospace" font-size="18">README.md:1</text>
+  <text x="32" y="388" fill="#C7D2EA" font-family="Inter, Arial, sans-serif" font-size="18">Outputs JSON, Markdown, SARIF, HTML, and GitHub Actions annotations.</text>
+</svg>

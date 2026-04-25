@@ -1,0 +1,39 @@
+{
+  "name": "agent-hardening-kit",
+  "version": "0.1.0",
+  "description": "One-command AI agent, MCP, prompt, secret, CI and release hardening scanner for open-source repositories.",
+  "type": "module",
+  "bin": {
+    "agent-hardening-kit": "./src/cli.js",
+    "ahk": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "docs",
+    "assets",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node src/cli.js --path fixtures/good-repo --json --min-score 80 && node src/cli.js --path fixtures/risky-repo --markdown",
+    "test": "node --test tests/*.test.js",
+    "smoke:html": "node src/cli.js --path fixtures/risky-repo --html > agent-hardening-report.html",
+    "smoke:sarif": "node src/cli.js --path fixtures/risky-repo --sarif > agent-hardening.sarif"
+  },
+  "keywords": [
+    "ai-agent",
+    "mcp",
+    "prompt-injection",
+    "security",
+    "sarif",
+    "github-actions",
+    "llmops",
+    "developer-tools"
+  ],
+  "author": "Aolinge",
+  "license": "MIT"
+}

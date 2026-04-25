@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log*
+agent-hardening-report.html
+agent-hardening.sarif
+.agent-hardening/
+coverage/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+!fixtures/risky-repo/.env

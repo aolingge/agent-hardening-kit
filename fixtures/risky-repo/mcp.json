@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "unknown-mcp-server"],
+      "env": {
+        "apiKey": "example-inline-secret-value"
+      }
+    }
+  }
+}

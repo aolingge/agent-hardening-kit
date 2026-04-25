@@ -1,0 +1,34 @@
+<svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Hardening Kit</title>
+  <desc id="desc">A professional dashboard style banner for an AI agent security scanner.</desc>
+  <rect width="1280" height="520" rx="0" fill="#080D1A"/>
+  <path d="M0 410C190 330 310 460 495 358C700 245 820 300 990 220C1110 165 1190 115 1280 140V520H0V410Z" fill="#0F2D28"/>
+  <path d="M0 278C175 330 287 280 420 250C610 205 780 245 920 180C1045 122 1162 93 1280 116" stroke="#6FE37A" stroke-width="3" opacity=".65"/>
+  <path d="M0 332C210 380 320 330 480 300C640 270 760 305 900 250C1055 190 1162 177 1280 198" stroke="#6B7CFF" stroke-width="2" opacity=".45"/>
+  <g filter="url(#shadow)">
+    <rect x="116" y="86" width="1048" height="330" rx="32" fill="#F7FAFF"/>
+    <rect x="148" y="118" width="984" height="266" rx="22" fill="#FFFFFF" stroke="#D9E2F2"/>
+    <rect x="184" y="154" width="388" height="184" rx="18" fill="#111827"/>
+    <circle cx="216" cy="188" r="8" fill="#FF5C7A"/>
+    <circle cx="242" cy="188" r="8" fill="#F4C95D"/>
+    <circle cx="268" cy="188" r="8" fill="#58D68D"/>
+    <text x="214" y="240" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Agent Hardening Kit</text>
+    <text x="214" y="278" fill="#B7C4DA" font-family="Inter, Arial, sans-serif" font-size="18">MCP · prompts · secrets · shell · CI · release proof</text>
+    <rect x="214" y="308" width="116" height="32" rx="16" fill="#7ED321"/>
+    <text x="248" y="330" fill="#08101F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">A grade</text>
+    <rect x="344" y="308" width="152" height="32" rx="16" fill="#243047"/>
+    <text x="373" y="330" fill="#D6E2F5" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">SARIF ready</text>
+    <rect x="640" y="150" width="392" height="192" rx="20" fill="#F8FBFF" stroke="#CBD6EA"/>
+    <rect x="672" y="178" width="308" height="38" rx="10" fill="#E7F9C5"/>
+    <text x="695" y="203" fill="#235B12" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="700">$ ahk --path . --sarif</text>
+    <text x="690" y="250" fill="#008F5A" font-family="JetBrains Mono, Consolas, monospace" font-size="17">PASS</text>
+    <text x="760" y="250" fill="#111827" font-family="JetBrains Mono, Consolas, monospace" font-size="17">agent boundaries</text>
+    <text x="690" y="292" fill="#D17A00" font-family="JetBrains Mono, Consolas, monospace" font-size="17">WARN</text>
+    <text x="760" y="292" fill="#111827" font-family="JetBrains Mono, Consolas, monospace" font-size="17">mcp permission notes</text>
+  </g>
+  <defs>
+    <filter id="shadow" x="76" y="58" width="1128" height="410" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+</svg>

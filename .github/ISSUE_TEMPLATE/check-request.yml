@@ -1,0 +1,17 @@
+name: New Check Request
+description: Propose a new agent hardening rule.
+title: "check: "
+labels: ["rule-request"]
+body:
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk
+      description: What agent, MCP, prompt, secret, shell, CI, or release risk should this catch?
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Add safe, redacted examples or fixture ideas.

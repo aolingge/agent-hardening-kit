@@ -1,0 +1,6 @@
+# Fixtures intentionally contain unsafe examples for tests.
+fixtures/risky-repo/
+
+# Local generated reports.
+agent-hardening-report.html
+agent-hardening.sarif
