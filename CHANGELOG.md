@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 - 2026-04-25
+
+- Updated public quick-start commands to use `npx github:aolingge/agent-hardening-kit` before npm publication.
+- Kept generated CI policy templates copy-ready for the GitHub-hosted package.
+
 ## 0.1.0 - 2026-04-25
 
 - Initial public release.

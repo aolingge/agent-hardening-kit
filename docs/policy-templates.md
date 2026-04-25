@@ -3,7 +3,7 @@
 Run:
 
 ```bash
-npx agent-hardening-kit --path . --write-policy
+npx github:aolingge/agent-hardening-kit --path . --write-policy
 ```
 
 Generated files:

@@ -7,7 +7,7 @@
 [English](README.md) · [检查项](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [威胁模型](docs/threat-model.md)
 
 ```bash
-npx agent-hardening-kit --path . --markdown
+npx github:aolingge/agent-hardening-kit --path . --markdown
 ```
 
 ![CLI preview](assets/cli-preview.svg)
@@ -34,11 +34,11 @@ Agent Hardening Kit 把这些检查变成一个可本地运行、也可接入 Gi
 ## 快速开始
 
 ```bash
-npx agent-hardening-kit --path .
-npx agent-hardening-kit --path . --json
-npx agent-hardening-kit --path . --sarif > agent-hardening.sarif
-npx agent-hardening-kit --path . --html > agent-hardening-report.html
-npx agent-hardening-kit --path . --write-policy
+npx github:aolingge/agent-hardening-kit --path .
+npx github:aolingge/agent-hardening-kit --path . --json
+npx github:aolingge/agent-hardening-kit --path . --sarif > agent-hardening.sarif
+npx github:aolingge/agent-hardening-kit --path . --html > agent-hardening-report.html
+npx github:aolingge/agent-hardening-kit --path . --write-policy
 ```
 
 如果仓库里有故意做坏的测试样例或生成报告，可以用 `.agent-hardening-ignore` 排除。

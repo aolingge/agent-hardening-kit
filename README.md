@@ -7,7 +7,7 @@ One command to score whether a repository is ready for AI coding agents, MCP ser
 [中文](README.zh-CN.md) · [Checks](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [Threat Model](docs/threat-model.md)
 
 ```bash
-npx agent-hardening-kit --path . --markdown
+npx github:aolingge/agent-hardening-kit --path . --markdown
 ```
 
 ![CLI preview](assets/cli-preview.svg)
@@ -35,19 +35,19 @@ Agent Hardening Kit turns that checklist into a fast scanner that maintainers ca
 
 ```bash
 # Human-readable terminal report
-npx agent-hardening-kit --path .
+npx github:aolingge/agent-hardening-kit --path .
 
 # Markdown for pull requests
-npx agent-hardening-kit --path . --markdown > agent-hardening-report.md
+npx github:aolingge/agent-hardening-kit --path . --markdown > agent-hardening-report.md
 
 # SARIF for GitHub Code Scanning
-npx agent-hardening-kit --path . --sarif > agent-hardening.sarif
+npx github:aolingge/agent-hardening-kit --path . --sarif > agent-hardening.sarif
 
 # Self-contained HTML dashboard
-npx agent-hardening-kit --path . --html > agent-hardening-report.html
+npx github:aolingge/agent-hardening-kit --path . --html > agent-hardening-report.html
 
 # Generate starter policy files and CI workflow
-npx agent-hardening-kit --path . --write-policy
+npx github:aolingge/agent-hardening-kit --path . --write-policy
 ```
 
 Use `.agent-hardening-ignore` to exclude intentionally unsafe fixtures or generated reports from project-level scans.
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npx agent-hardening-kit --path . --sarif > agent-hardening.sarif
+      - run: npx github:aolingge/agent-hardening-kit --path . --sarif > agent-hardening.sarif
       - uses: github/codeql-action/upload-sarif@v3
         if: always()
         with:
