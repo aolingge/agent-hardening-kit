@@ -4,7 +4,7 @@
 
 一个命令检查你的仓库是否适合交给 AI 编程 Agent、MCP 工具、Prompt 工作流和 CI 发布流程使用。
 
-[English](README.md) · [检查项](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [威胁模型](docs/threat-model.md)
+[English](README.md) · [检查项](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [PowerShell 指南](docs/powershell.md) · [威胁模型](docs/threat-model.md)
 
 ```bash
 npx github:aolingge/agent-hardening-kit --path . --markdown
@@ -43,6 +43,8 @@ npx github:aolingge/agent-hardening-kit --path . --write-policy
 
 如果仓库里有故意做坏的测试样例或生成报告，可以用 `.agent-hardening-ignore` 排除。
 
+Windows / PowerShell 用户可以直接参考 [docs/powershell.md](docs/powershell.md) 里的命令和 CI 写法。
+
 ## 为什么这个项目值得 Star
 
 - 面向 AI Agent 和 MCP 的真实新增风险，不是普通代码格式检查。
@@ -55,6 +57,7 @@ npx github:aolingge/agent-hardening-kit --path . --write-policy
 
 - 补充更多真实 MCP 配置样例。
 - 增加 GitLab CI、Gitee、Jenkins 示例。
+- 增加更多面向 Windows 与 PowerShell 的自动化示例。
 - 增加规则抑制和白名单机制。
 - 增加不同 Agent 工具的专属规则包。
 

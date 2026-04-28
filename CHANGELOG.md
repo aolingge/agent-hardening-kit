@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added `docs/powershell.md` with Windows PowerShell local scan, CI gate, and report-generation examples.
+- Linked the new PowerShell guide from the English and Chinese READMEs and the GitHub Actions guide.
+
 ## 0.1.1 - 2026-04-25
 
 - Updated public quick-start commands to use `npx github:aolingge/agent-hardening-kit` before npm publication.

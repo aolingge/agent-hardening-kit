@@ -4,7 +4,7 @@
 
 One command to score whether a repository is ready for AI coding agents, MCP servers, prompt workflows, CI, and public release.
 
-[中文](README.zh-CN.md) · [Checks](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [Threat Model](docs/threat-model.md)
+[中文](README.zh-CN.md) · [Checks](docs/checks.md) · [GitHub Actions](docs/github-actions.md) · [PowerShell](docs/powershell.md) · [Threat Model](docs/threat-model.md)
 
 ```bash
 npx github:aolingge/agent-hardening-kit --path . --markdown
@@ -51,6 +51,8 @@ npx github:aolingge/agent-hardening-kit --path . --write-policy
 ```
 
 Use `.agent-hardening-ignore` to exclude intentionally unsafe fixtures or generated reports from project-level scans.
+
+Windows users can follow the PowerShell-specific commands in [docs/powershell.md](docs/powershell.md).
 
 ## CI Gate
 
@@ -99,6 +101,7 @@ The scanner starts at 100 and subtracts weighted penalties for findings. It is i
 
 - More real-world MCP fixtures.
 - GitLab CI and Gitee workflow examples.
+- More Windows-first automation examples for PowerShell-heavy repositories.
 - Rule suppression with justification comments.
 - npm package publishing workflow.
 - Community-maintained rule packs for specific agent tools.
