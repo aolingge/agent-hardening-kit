@@ -49,6 +49,62 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 `$LASTEXITCODE` is the process exit code exposed by PowerShell. A non-zero value means the scan found enough problems to fail the gate.
 
+## Safer File Operations
+
+When fixing scanner findings in Windows repositories, prefer PowerShell cmdlets
+that support dry runs and literal paths. This makes cleanup scripts easier to
+review and safer to run from agent workflows.
+
+Preview a cleanup with `-WhatIf` before deleting generated reports:
+
+```powershell
+$reportPath = Join-Path -Path $PWD -ChildPath 'agent-hardening-report.html'
+Remove-Item -LiteralPath $reportPath -WhatIf
+```
+
+Use `-LiteralPath` for paths that may contain spaces, brackets, or other
+characters that PowerShell treats as wildcards:
+
+```powershell
+$artifactPath = Join-Path -Path $PWD -ChildPath 'reports\[draft] agent hardening.md'
+Remove-Item -LiteralPath $artifactPath -WhatIf
+```
+
+Resolve and validate a target path before recursive cleanup. This example only
+allows deletion inside the current repository's `reports` directory:
+
+```powershell
+$reportsRoot = (Resolve-Path -LiteralPath (Join-Path $PWD 'reports')).Path
+$targetPath = (Resolve-Path -LiteralPath (Join-Path $reportsRoot 'generated')).Path
+
+if (-not $targetPath.StartsWith($reportsRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+  throw "Refusing to remove a path outside $reportsRoot"
+}
+
+Remove-Item -LiteralPath $targetPath -Recurse -WhatIf
+```
+
+Wrap destructive helper scripts in `ShouldProcess` so maintainers can use
+`-WhatIf` and `-Confirm` consistently:
+
+```powershell
+function Clear-AgentHardeningReports {
+  [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
+  param(
+    [Parameter(Mandatory)]
+    [string] $ReportsPath
+  )
+
+  $resolvedPath = (Resolve-Path -LiteralPath $ReportsPath).Path
+
+  if ($PSCmdlet.ShouldProcess($resolvedPath, 'Remove generated reports')) {
+    Remove-Item -LiteralPath $resolvedPath -Recurse
+  }
+}
+
+Clear-AgentHardeningReports -ReportsPath .\reports -WhatIf
+```
+
 ## GitHub Actions on Windows
 
 Use `shell: pwsh` when you want the same command style locally and in CI:
